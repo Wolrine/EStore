@@ -254,3 +254,4 @@ D:\WorkSpace\C#\Web Application with ASP.NET Core MVC\MyStoreWinApp\obj\Debug\ne
 D:\WorkSpace\C#\Web Application with ASP.NET Core MVC\MyStoreWinApp\obj\Debug\net7.0\MyStoreWinApp.pdb
 D:\WorkSpace\C#\Web Application with ASP.NET Core MVC\MyStoreWinApp\obj\Debug\net7.0\MyStoreWinApp.genruntimeconfig.cache
 D:\WorkSpace\C#\Web Application with ASP.NET Core MVC\MyStoreWinApp\obj\Debug\net7.0\ref\MyStoreWinApp.dll
+D:\WorkSpace\C#\Web Application with ASP.NET Core MVC\MyStoreWinApp\bin\Debug\net7.0\libman.json

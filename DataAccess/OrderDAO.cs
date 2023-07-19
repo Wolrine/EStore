@@ -25,33 +25,45 @@ public class OrderDAO
     }
     #endregion
 
-    public EStoreContext storeContext = new();
+    private EStoreContext context = new();
 
     public void Create(Order order)
     {
-        storeContext.Orders.AddAsync(order);
-        storeContext.SaveChanges();
+        context.Orders.AddAsync(order);
+        context.SaveChanges();
     }
 
     public void Delete(int orderId)
     {
-        storeContext.Orders
+        context.Orders
             .Where(e => e.OrderId == orderId)
             .ExecuteDeleteAsync();
-        storeContext.SaveChanges();
+        context.SaveChanges();
     }
 
-    public Order GetById(int id) =>
-        storeContext.Orders
-            .First(e => e.OrderId == id);
+    public Order GetById(int id)
+    {
+        var order = context.Orders.First(e => e.OrderId == id);
+        if (order.Member != null)
+            context.Entry(order).Reference(e => e.Member).LoadAsync();
+        return order;
+    }
 
-    public IEnumerable<Order> Read() =>
-        storeContext.Orders
-            .ToListAsync().Result;
+    public IEnumerable<Order> Read()
+    {
+        var orders = context.Orders.ToListAsync().Result;
+        foreach (var order in orders)
+        {
+            if (order.Member != null)
+                context.Entry(order).Reference(e => e.Member).LoadAsync();
+        }
+        return orders;
+    }
 
     public void Update(Order order)
     {
-        storeContext.Orders.Update(order);
-        storeContext.SaveChanges();
+        using var context = new EStoreContext();
+        context.Orders.Update(order);
+        context.SaveChanges();
     }
 }

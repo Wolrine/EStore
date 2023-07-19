@@ -1,6 +1,7 @@
 ﻿using BusinessObject;
 using DataAccess.Repository;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace MyStoreWinApp.Controllers
 {
@@ -37,6 +38,12 @@ namespace MyStoreWinApp.Controllers
         // GET: OrderController/Create
         public ActionResult Create()
         {
+            ViewBag.MemberId = from member in new MemberRepository().Read()
+                               select new SelectListItem
+                               {
+                                   Text = $"{member.Email} ({member.MemberId.ToString()})",
+                                   Value = member.MemberId.ToString()
+                               };
             return View();
         }
 
@@ -61,6 +68,12 @@ namespace MyStoreWinApp.Controllers
         {
             try
             {
+                ViewBag.MemberId = from member in new MemberRepository().Read()
+                                   select new SelectListItem
+                                   {
+                                       Text = $"{member.Email} ({member.MemberId.ToString()})",
+                                       Value = member.MemberId.ToString()
+                                   };
                 return View(repository.GetById(id));
             }
             catch

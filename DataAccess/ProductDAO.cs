@@ -25,33 +25,36 @@ public class ProductDAO
     }
     #endregion
 
-    public EStoreContext storeContext = new();
+    private EStoreContext context = new();
 
     public void Create(Product product)
     {
-        storeContext.Products.AddAsync(product);
-        storeContext.SaveChanges();
+        context.Products.AddAsync(product);
+        context.SaveChanges();
     }
 
     public void Delete(int productId)
     {
-        storeContext.Products
+        context.Products
             .Where(e => e.ProductId == productId)
             .ExecuteDeleteAsync();
-        storeContext.SaveChanges();
+        context.SaveChanges();
     }
 
-    public Product GetById(int id) =>
-        storeContext.Products
-            .First(e => e.ProductId == id);
+    public Product GetById(int id)
+    {
+        return context.Products.First(e => e.ProductId == id);
+    }
 
-    public IEnumerable<Product> Read() =>
-        storeContext.Products
-            .ToListAsync().Result;
+    public IEnumerable<Product> Read()
+    {
+        return context.Products.ToListAsync().Result;
+    }
 
     public void Update(Product product)
     {
-        storeContext.Products.Update(product);
-        storeContext.SaveChanges();
+        context = new EStoreContext();
+        context.Products.Update(product);
+        context.SaveChanges();
     }
 }
