@@ -1,0 +1,12 @@
+D:\WorkSpace\C#\Web Application with ASP.NET Core MVC\BusinessObject\bin\Debug\net7.0\BusinessObject.deps.json
+D:\WorkSpace\C#\Web Application with ASP.NET Core MVC\BusinessObject\bin\Debug\net7.0\BusinessObject.dll
+D:\WorkSpace\C#\Web Application with ASP.NET Core MVC\BusinessObject\bin\Debug\net7.0\BusinessObject.pdb
+D:\WorkSpace\C#\Web Application with ASP.NET Core MVC\BusinessObject\obj\Debug\net7.0\BusinessObject.csproj.AssemblyReference.cache
+D:\WorkSpace\C#\Web Application with ASP.NET Core MVC\BusinessObject\obj\Debug\net7.0\BusinessObject.GeneratedMSBuildEditorConfig.editorconfig
+D:\WorkSpace\C#\Web Application with ASP.NET Core MVC\BusinessObject\obj\Debug\net7.0\BusinessObject.AssemblyInfoInputs.cache
+D:\WorkSpace\C#\Web Application with ASP.NET Core MVC\BusinessObject\obj\Debug\net7.0\BusinessObject.AssemblyInfo.cs
+D:\WorkSpace\C#\Web Application with ASP.NET Core MVC\BusinessObject\obj\Debug\net7.0\BusinessObject.csproj.CoreCompileInputs.cache
+D:\WorkSpace\C#\Web Application with ASP.NET Core MVC\BusinessObject\obj\Debug\net7.0\BusinessObject.dll
+D:\WorkSpace\C#\Web Application with ASP.NET Core MVC\BusinessObject\obj\Debug\net7.0\refint\BusinessObject.dll
+D:\WorkSpace\C#\Web Application with ASP.NET Core MVC\BusinessObject\obj\Debug\net7.0\BusinessObject.pdb
+D:\WorkSpace\C#\Web Application with ASP.NET Core MVC\BusinessObject\obj\Debug\net7.0\ref\BusinessObject.dll
