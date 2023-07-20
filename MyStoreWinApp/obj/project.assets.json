@@ -11655,6 +11655,7 @@
       "DataAccess >= 1.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.9",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.9",
+      "Microsoft.Extensions.Configuration.Json >= 7.0.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 7.0.8"
     ]
   },
@@ -11716,6 +11717,10 @@
             "suppressParent": "All",
             "target": "Package",
             "version": "[7.0.9, )"
+          },
+          "Microsoft.Extensions.Configuration.Json": {
+            "target": "Package",
+            "version": "[7.0.0, )"
           },
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",

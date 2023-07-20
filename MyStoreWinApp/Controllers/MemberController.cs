@@ -1,9 +1,11 @@
 ﻿using BusinessObject;
 using DataAccess.Repository;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MyStoreWinApp.Controllers
 {
+    [Authorize]
     public class MemberController : Controller
     {
         private MemberRepository repository = new();

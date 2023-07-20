@@ -41,21 +41,19 @@ public class OrderDAO
         context.SaveChanges();
     }
 
-    public Order GetById(int id)
+    public async Task<Order> GetById(int id)
     {
         var order = context.Orders.First(e => e.OrderId == id);
-        if (order.Member != null)
-            context.Entry(order).Reference(e => e.Member).LoadAsync();
+        await context.Entry(order).Reference(e => e.Member).LoadAsync();
         return order;
     }
 
-    public IEnumerable<Order> Read()
+    public async Task<IEnumerable<Order>> Read()
     {
         var orders = context.Orders.ToListAsync().Result;
         foreach (var order in orders)
         {
-            if (order.Member != null)
-                context.Entry(order).Reference(e => e.Member).LoadAsync();
+            await context.Entry(order).Reference(e => e.Member).LoadAsync();
         }
         return orders;
     }

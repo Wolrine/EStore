@@ -11,10 +11,10 @@ public class OrderRepository : IOrderRepository
         OrderDAO.Instance.Delete(id);
 
     public Order? GetById(int id) =>
-        OrderDAO.Instance.GetById(id);
+        OrderDAO.Instance.GetById(id).Result;
 
     public IEnumerable<Order> Read() =>
-        OrderDAO.Instance.Read();
+        OrderDAO.Instance.Read().Result;
 
     public void Update(Order entity) =>
         OrderDAO.Instance.Update(entity);

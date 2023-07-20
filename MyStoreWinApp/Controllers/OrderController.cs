@@ -1,10 +1,12 @@
 ﻿using BusinessObject;
 using DataAccess.Repository;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace MyStoreWinApp.Controllers
 {
+    [Authorize]
     public class OrderController : Controller
     {
         private OrderRepository repository = new();
@@ -41,7 +43,7 @@ namespace MyStoreWinApp.Controllers
             ViewBag.MemberId = from member in new MemberRepository().Read()
                                select new SelectListItem
                                {
-                                   Text = $"{member.Email} ({member.MemberId.ToString()})",
+                                   Text = $"{member.Email} ({member.MemberId})",
                                    Value = member.MemberId.ToString()
                                };
             return View();
@@ -71,7 +73,7 @@ namespace MyStoreWinApp.Controllers
                 ViewBag.MemberId = from member in new MemberRepository().Read()
                                    select new SelectListItem
                                    {
-                                       Text = $"{member.Email} ({member.MemberId.ToString()})",
+                                       Text = $"{member.Email} ({member.MemberId})",
                                        Value = member.MemberId.ToString()
                                    };
                 return View(repository.GetById(id));

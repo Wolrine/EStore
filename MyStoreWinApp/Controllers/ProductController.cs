@@ -1,18 +1,25 @@
 ﻿using BusinessObject;
 using DataAccess.Repository;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MyStoreWinApp.Controllers
 {
+    [Authorize]
     public class ProductController : Controller
     {
         private ProductRepository repository = new();
 
         // GET: ProductController
-        public ActionResult Index()
+        public ActionResult Index(string search = "")
         {
             try
             {
+                if (!search.Equals(""))
+                {
+                    return View(
+                        repository.Read().Where(e => e.ProductName.Contains(search)));
+                }
                 return View(repository.Read());
             }
             catch
