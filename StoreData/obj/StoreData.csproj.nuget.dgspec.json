@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "D:\\WorkSpace\\C#\\Web Application with ASP.NET Core MVC\\MyStoreWinApp\\MyStoreWinApp.csproj": {}
+    "D:\\WorkSpace\\C#\\Web Application with ASP.NET Core MVC\\StoreData\\StoreData.csproj": {}
   },
   "projects": {
     "D:\\WorkSpace\\C#\\Web Application with ASP.NET Core MVC\\BusinessObject\\BusinessObject.csproj": {
@@ -150,14 +150,14 @@
         }
       }
     },
-    "D:\\WorkSpace\\C#\\Web Application with ASP.NET Core MVC\\MyStoreWinApp\\MyStoreWinApp.csproj": {
+    "D:\\WorkSpace\\C#\\Web Application with ASP.NET Core MVC\\StoreData\\StoreData.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\WorkSpace\\C#\\Web Application with ASP.NET Core MVC\\MyStoreWinApp\\MyStoreWinApp.csproj",
-        "projectName": "MyStoreWinApp",
-        "projectPath": "D:\\WorkSpace\\C#\\Web Application with ASP.NET Core MVC\\MyStoreWinApp\\MyStoreWinApp.csproj",
+        "projectUniqueName": "D:\\WorkSpace\\C#\\Web Application with ASP.NET Core MVC\\StoreData\\StoreData.csproj",
+        "projectName": "StoreData",
+        "projectPath": "D:\\WorkSpace\\C#\\Web Application with ASP.NET Core MVC\\StoreData\\StoreData.csproj",
         "packagesPath": "C:\\Users\\LAM\\.nuget\\packages\\",
-        "outputPath": "D:\\WorkSpace\\C#\\Web Application with ASP.NET Core MVC\\MyStoreWinApp\\obj\\",
+        "outputPath": "D:\\WorkSpace\\C#\\Web Application with ASP.NET Core MVC\\StoreData\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -197,29 +197,11 @@
           "dependencies": {
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
-              "version": "[7.0.9, )"
-            },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
-              "target": "Package",
-              "version": "[7.0.9, )"
-            },
-            "Microsoft.EntityFrameworkCore.Tools": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[7.0.9, )"
-            },
-            "Microsoft.Extensions.Configuration.Json": {
-              "target": "Package",
-              "version": "[7.0.0, )"
-            },
-            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
-              "target": "Package",
-              "version": "[7.0.8, )"
+              "version": "[7.0.5, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[6.5.0, )"
+              "version": "[6.4.0, )"
             }
           },
           "imports": [
